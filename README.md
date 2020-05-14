@@ -22,9 +22,14 @@ There are many ways to **[contribute](https://github.com/bullhorn/career-portal/
 *  **[Bullhorn Platform](http://bullhorn.github.io/platform)**
 *  **[Bullhorn Website](http://www.bullhorn.com)**
 
+
+## For MacOSx and Ubuntu
+Before install node, make sure you installed XCode.  `xcode-select --install` or `gcc` for ubuntu
+
+
 ## Building
 
-In order to build Bullhorn Career Portal, ensure that you have **[Git](http://git-scm.com/downloads)**, **[Node.js](http://nodejs.org)**, and **[Angular CLI](https://angular.io/guide/setup-local#step-1-install-the-angular-cli)** installed.
+In order to build Bullhorn Career Portal, ensure that you have **[Git](http://git-scm.com/downloads)**, **[Node.js](http://nodejs.org)** (v13.8.0), and **[Angular CLI](https://angular.io/guide/setup-local#step-1-install-the-angular-cli)** (7.1.4)installed.
 
 Clone a copy of the repo:
 
