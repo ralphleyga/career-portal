@@ -9,7 +9,7 @@
     "rtf",
     "odt"
   ],
-  "companyName": "[ COMPANY NAME HERE ]",
+  "companyName": "Medmetry",
   "companyLogoPath": "",
   "companyUrl": "",
   "careersUrl": "",
@@ -24,9 +24,9 @@
   "maxUploadSize": 5242880,
   "service": {
     "batchSize": 500,
-    "corpToken": "1VCNF4",
+    "corpToken": "6LLOI9",
     "port": null,
-    "swimlane": "91",
+    "swimlane": "42",
     "fields": [
       "id",
       "title",
