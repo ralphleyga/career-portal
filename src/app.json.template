@@ -9,10 +9,10 @@
     "rtf",
     "odt"
   ],
-  "companyName": "[ COMPANY NAME HERE ]",
+  "companyName": "Medmetry",
   "companyLogoPath": "",
-  "companyUrl": "",
-  "careersUrl": "",
+  "companyUrl": "medmetry.com",
+  "careersUrl": "jobs.medmetry.net",
   "defaultLocale": "en-US",
   "supportedLocales": [
       "en-US",
@@ -24,9 +24,9 @@
   "maxUploadSize": 5242880,
   "service": {
     "batchSize": 500,
-    "corpToken": "[ CORP TOKEN HERE ]",
+    "corpToken": "6LLOI9",
     "port": null,
-    "swimlane": "[ SWIMLANE HERE ]",
+    "swimlane": "42",
     "fields": [
       "id",
       "title",

@@ -77,7 +77,7 @@
   },
   "privacyConsent": {
     "consentCheckbox": false,
-    "sidebarLink": true,
+    "sidebarLink": false,
     "privacyPolicyUrl": "/privacy"
   }
 }

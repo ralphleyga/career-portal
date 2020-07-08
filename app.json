@@ -5,33 +5,33 @@
   "logo": "http://www.bullhorn.com/wp-content/uploads/2016/08/BH16_logo_orange_blue_stacked.png",
   "keywords": ["bullhorn", "career-portal", "jobs", "angular", "express"],
   "env": {
-    "BULLHORN_SWIMLANE": {
+    "42": {
       "description": "What is your company's Bullhorn Swimlane?",
       "required": "true"
     },
-    "BULLHORN_CORP_TOKEN": {
+    "6LLOI9": {
       "description": "What is your company's Corp Token?",
       "required": "true"
     },
-    "HOSTED_ENDPOINT": {
+    "jobs.medmetry.net": {
       "description": "Where is this site hosted?",
       "required": "true"
     },
-    "COMPANY_NAME": {
+    "Medmetry": {
       "description": "What is your company name?",
       "required": "true"
     },
-    "COMPANY_WEBSITE": {
+    "medmetry.com": {
       "description": "What is your company website?",
       "required": "true"
     },
     "COMPANY_LOGO_URL": {
       "description": "Url for you companies logo?",
-      "required": "true"
+      "required": "false"
     },
     "GOOGLE_VERIFICATION_CODE": {
       "description": "HTML tag Verification Code from https://www.google.com/webmasters/verification/verification",
-      "required": "true"
+      "required": "false"
     },
     "GOOGLE_ANALYTICS_TRACKING_ID": {
       "description": "Google Analytics Tracking ID",
