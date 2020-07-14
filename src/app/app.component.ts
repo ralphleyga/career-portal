@@ -7,7 +7,7 @@ import { NovoToastService, NovoModalService } from 'novo-elements';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styles: [],
 })
 export class AppComponent implements OnInit {
   public title: string = SettingsService.settings.companyName;

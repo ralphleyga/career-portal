@@ -8,7 +8,7 @@ import { TranslateService } from 'chomsky';
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
-  styleUrls: ['./job-list.component.scss'],
+  styles: [],
 })
 export class JobListComponent implements OnChanges {
   @Input() public filter: any;
@@ -74,7 +74,7 @@ export class JobListComponent implements OnChanges {
     }
     this.total = res.total;
     this.moreAvailable = (res.count === 30);
-    this.loading = false;
+  this.loading = false;
   }
 
   private onFailure(res: any): void {

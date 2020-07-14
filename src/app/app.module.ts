@@ -28,6 +28,8 @@ import { JobResolver } from './job.resolver';
 import { ServerResponseService } from './services/server-response/server-response.service';
 import { environment } from '../environments/environment';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { MainHeaderComponent } from './layout/header.component'
+import { MainFooterComponent } from './layout/footer.component'
 
 const appRoutes: Routes = [
   { path: '', component: MainPageComponent },
@@ -53,6 +55,9 @@ export function initSettings(settings: SettingsService): any {
       SidebarFilterComponent,
       StructuredSeoComponent,
       PrivacyPolicyComponent,
+
+      MainHeaderComponent,
+      MainFooterComponent,
    ],
    entryComponents: [
       ApplyModalComponent,

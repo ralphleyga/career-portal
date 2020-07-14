@@ -15,7 +15,10 @@ import { TranslateService } from 'chomsky';
 @Component({
   selector: 'app-job-details',
   templateUrl: './job-details.component.html',
-  styleUrls: ['./job-details.component.scss'],
+  styles: [
+    '.job-detail-share button { font-size: 3rem !important; width: auto; height: auto; }',
+
+  ],
 })
 export class JobDetailsComponent implements OnInit {
   public job: JobBoardPost | any;

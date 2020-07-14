@@ -5,7 +5,7 @@ import { CheckListControl, FormUtils, NovoFormGroup, FieldInteractionApi } from 
 @Component({
   selector: 'app-sidebar-filter',
   templateUrl: './sidebar-filter.component.html',
-  styleUrls: ['./sidebar-filter.component.scss'],
+  styles: [],
 })
 export class SidebarFilterComponent implements OnChanges {
   @Output() public checkboxFilter: EventEmitter<any> = new EventEmitter();

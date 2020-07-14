@@ -7,7 +7,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-structured-seo',
   templateUrl: './structured-seo.component.html',
-  styleUrls: ['./structured-seo.component.scss'],
+  styles: [],
 })
 export class StructuredSeoComponent implements OnChanges {
   @Input() public jobData: JobBoardPost;
