@@ -25,7 +25,8 @@ h2:after {
 	top: -40px;
 }
 section {
-	padding: 140px 0;
+	/* padding: 140px 0; */
+	padding: 0 0;
 }
 .button-1 {
 	background: #b780d8; /* Old browsers */

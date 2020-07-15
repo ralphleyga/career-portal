@@ -8,7 +8,9 @@ import { TranslateService } from 'chomsky';
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
-  styles: [],
+  styles: [
+    
+  ],
 })
 export class JobListComponent implements OnChanges {
   @Input() public filter: any;

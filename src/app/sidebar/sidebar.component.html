@@ -1,15 +1,23 @@
-<div class="header">
-  <div class="close-filter-container">
-    <button theme="icon" (click)="hideSidebar()" icon="times"></button>
-  </div>
-<novo-search placeholder="Keyword Search" alwaysOpen="true" [(ngModel)]="keyword" (ngModelChange)="searchOnDelay()"></novo-search>
+<div class="search-area">
+  <h4>Search by keywords</h4>
+  <input placeholder="Keyword Search" alwaysOpen="true" [(ngModel)]="keyword" (ngModelChange)="searchOnDelay()" type="text"/>
 </div>
+
 <novo-loading *ngIf="loading"></novo-loading>
 <ng-container *ngIf="!loading">
-  <div class="filters">
-    <app-sidebar-filter field="publishedCategory(id,name)" title="{{ 'CATEGORY' | translate}}" [filter]="filter" (checkboxFilter)="updateFilter('publishedCategory', $event)" ></app-sidebar-filter>
-    <app-sidebar-filter field="address(state)" title="{{ 'STATE' | translate}}" [filter]="filter" (checkboxFilter)="updateFilter('address(state)', $event)"></app-sidebar-filter>
-    <app-sidebar-filter field="address(city)" title="{{ 'CITY' | translate}}" [filter]="filter" (checkboxFilter)="updateFilter('address(city)', $event)"></app-sidebar-filter>
+  <div class="filter">
+    <h4>Filter by {{ 'CATEGORY' | translate}}</h4>
+    <div class="checkbox">
+        <app-sidebar-filter field="publishedCategory(id,name)" title="{{ 'CATEGORY' | translate}}" [filter]="filter" (checkboxFilter)="updateFilter('publishedCategory', $event)" ></app-sidebar-filter>
+    </div>
+  </div>
+  <div class="filter">
+      <h4>Filter by {{ 'STATE' | translate}}</h4>
+      <app-sidebar-filter field="address(state)" title="{{ 'STATE' | translate}}" [filter]="filter" (checkboxFilter)="updateFilter('address(state)', $event)"></app-sidebar-filter>
+  </div>
+  <div class="filter">
+      <h4>Filter by {{ 'CITY' | translate}}</h4>
+      <app-sidebar-filter field="address(city)" title="{{ 'CITY' | translate}}" [filter]="filter" (checkboxFilter)="updateFilter('address(city)', $event)"></app-sidebar-filter>
   </div>
 </ng-container>
 
