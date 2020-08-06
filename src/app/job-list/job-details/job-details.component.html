@@ -30,7 +30,7 @@
 
                 </ng-container>
 
-                <span class="address" *ngIf="job.address.city || job.address.state" >Address: <strong>{{ job.address.city }} <span *ngIf="job.address?.city && job.address?.state">,&nbsp;</span> {{ job.address.state }}</strong></span>
+                <span class="address" *ngIf="job.address.city || job.address.state" >Address: <strong>{{ job.address.city }}</strong> <strong *ngIf="job.address.state">, {{ job.address.state }}</strong></span>
             </div>
         </div>
         <div class="row">
