@@ -1501,6 +1501,9 @@ footer p.text-center {
 	top: 23px;
 }
 
+.job-description ul {
+	float: none !important;
+}
 
 
 #job-listings .box {

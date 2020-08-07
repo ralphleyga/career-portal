@@ -33,7 +33,7 @@
                 <span class="address" *ngIf="job.address.city || job.address.state" >Address: <strong>{{ job.address.city }}</strong> <strong *ngIf="job.address.state">, {{ job.address.state }}</strong></span>
             </div>
         </div>
-        <div class="row">
+        <div class="row job-description">
             <div class="col-md-12" [innerHTML]="job.publicDescription">
             </div>
         </div>
