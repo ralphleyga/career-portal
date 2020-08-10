@@ -8,8 +8,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <h3 class="sidebar-heading">Manage Results</h3>
-                <div class="left-side-bar">
+                <h3 class="sidebar-heading">
+                    Manage Results
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#job-filter-sidebar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                </h3>
+                <div class="left-side-bar collapse navbar-collapse" id="job-filter-sidebar">
                     <app-sidebar (newFilter)="onSidebarFilter($event)" [display]="displaySidebar" (toggleSidebar)="toggleSidebar($event)" [ngStyle]="sidebarCss"></app-sidebar>
                 </div>
             </div>
