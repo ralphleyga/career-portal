@@ -1405,11 +1405,13 @@ footer p.text-center {
 	padding-left: 25px;
 	background-position: left 5px;
 	margin-bottom: 40px;
+	height: 25px;
 } 
 #registerd-section .date {
 	background-repeat: no-repeat;
 	padding-left: 25px;
 	background-position: left 5px;
+	padding-bottom: 0;
 }
 #registerd-section .job {
     background-image: url("../img/job-icon.png");

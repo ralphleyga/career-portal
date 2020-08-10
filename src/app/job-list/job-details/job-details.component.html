@@ -31,6 +31,8 @@
                 </ng-container>
 
                 <span class="address" *ngIf="job.address.city || job.address.state" >Address: <strong>{{ job.address.city }}</strong> <strong *ngIf="job.address.state">, {{ job.address.state }}</strong></span>
+
+                <span class="pay" *ngIf="job.salary" >Pay Rate: <strong>$ {{ job.salary }}</strong> {{ job.salaryUnit }}</span>
             </div>
         </div>
         <div class="row job-description">

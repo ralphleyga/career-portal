@@ -22,8 +22,8 @@
                 </div>
             </div>
             <div class="col-md-2 col-xs-6">
-                <h4>Pay Range</h4>
-                <h6 class="pay">${{ job.salary }} {{ job.salaryUnit }}</h6>
+                <h4  *ngIf="job.salary">Pay Range</h4>
+                <h6 class="pay"  *ngIf="job.salary">${{ job.salary }} {{ job.salaryUnit }}</h6>
             </div>
             <ng-container *ngFor="let chip of jobInfoChips" [ngSwitch]="chip.type || 'string'">
                 <ng-container *ngSwitchCase="'string'">
