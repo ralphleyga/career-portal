@@ -1666,6 +1666,10 @@ footer p.text-center {
 	background-color: #333;
 }
 
+#job-listings {
+	padding-top: 10px !important;
+}
+
 #job-listings .sidebar-heading {
 	z-index: 1 !important;
     background-color: #FFF;
