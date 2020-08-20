@@ -30,7 +30,7 @@
 
                 </ng-container>
 
-                <span class="pay">Pay Rate: <strong>$ {{ jobPayRate(job.salary) }}</strong> {{ job.salaryUnit }}</span>
+                <span class="pay" *ngIf="job.salary">Pay Rate: <strong>$ {{ jobPayRate(job.salary) }}</strong> {{ job.salaryUnit }}</span>
 
                 <span class="address" *ngIf="job.address.city || job.address.state" >Address: <strong>{{ job.address.city }}</strong> <strong *ngIf="job.address.state">, {{ job.address.state }}</strong></span>
 

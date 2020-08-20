@@ -115,19 +115,23 @@ export class JobDetailsComponent implements OnInit {
 
   public jobPayRateDisplay = '';
 
+  private roundOfPayRate(payrate) {
+    return (Math.round(payrate * 4) / 4).toFixed(2);
+  }
+
   public jobPayRate(payrate) {
     this.jobPayRateDisplay = payrate;
     let start_rate = 0;
     let end_rate = 0;
 
     if (payrate < 50) {
-      start_rate = payrate * 0.2 + payrate
-      end_rate = payrate * 0.1 + payrate
-    } else {
       start_rate = payrate * 0.1 + payrate
-      end_rate = payrate * 0.05 + payrate
+      end_rate = payrate * 0.2 + payrate
+    } else {
+      start_rate = payrate * 0.05 + payrate
+      end_rate = payrate * 0.1 + payrate
     }
-    this.jobPayRateDisplay = start_rate + '-' + end_rate
+    this.jobPayRateDisplay = this.roundOfPayRate(start_rate) + '-' + this.roundOfPayRate(end_rate)
 
     return this.jobPayRateDisplay
   }

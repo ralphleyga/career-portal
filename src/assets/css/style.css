@@ -28,6 +28,11 @@ h2:after {
 section {
 	padding: 140px 0;
 }
+
+.listing-img-5 h3 {
+	min-height: 75px;
+}
+
 .button-1 {
 	background: #b780d8; /* Old browsers */
 	background: -moz-linear-gradient(left,  #b780d8 0%, #8c58b4 50%, #673795 100%); /* FF3.6-15 */
