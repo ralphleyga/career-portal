@@ -36,6 +36,24 @@ export class JobListComponent implements OnChanges {
     this.getData();
   }
 
+  public jobPayRateDisplay = '';
+  public jobPayRate(payrate) {
+    this.jobPayRateDisplay = payrate;
+    let start_rate = 0;
+    let end_rate = 0;
+
+    if (payrate < 50) {
+      start_rate = payrate * 0.2 + payrate
+      end_rate = payrate * 0.1 + payrate
+    } else {
+      start_rate = payrate * 0.1 + payrate
+      end_rate = payrate * 0.05 + payrate
+    }
+    this.jobPayRateDisplay = start_rate + '-' + end_rate
+
+    return this.jobPayRateDisplay
+  }
+
   public getData(loadMore: boolean = false): void {
     this.start = loadMore ? (this.start + 30) : 0;
     this.titleService.setTitle(`${SettingsService.settings.companyName} - Careers`);

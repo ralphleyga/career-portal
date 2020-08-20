@@ -12,18 +12,14 @@
 
     <div class="box">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="listing-img-5">
                     <h3>{{ job.title }}</h3>
-
-                    <p style="max-height: 30px; overflow:hidden;">
-                        {{ job.publicDescription | stripHtml}}
-                    </p>
                 </div>
             </div>
             <div class="col-md-2 col-xs-6">
-                <h4  *ngIf="job.salary">Pay Range</h4>
-                <h6 class="pay"  *ngIf="job.salary">${{ job.salary }} {{ job.salaryUnit }}</h6>
+                <h4>Pay Range</h4>
+                <h6 class="pay">${{ jobPayRate(job.salary) }} {{ job.salaryUnit }}</h6>
             </div>
             <ng-container *ngFor="let chip of jobInfoChips" [ngSwitch]="chip.type || 'string'">
                 <ng-container *ngSwitchCase="'string'">
@@ -32,18 +28,7 @@
                         <h6 *ngIf="job.address.city && job.address.state" class="location">{{ job.address.city }}, {{ job.address.state }}</h6>
                     </div>
                 </ng-container>
-                <ng-container *ngSwitchCase="'mediumDate'">
-                    <div class="col-md-2 col-xs-6">
-                    <h4>Posting date</h4>
-                    <h6 class="date">{{ job[chip?.field] | date: 'mediumDate'}}</h6>
-                    </div>
-                </ng-container>
-                <ng-container  *ngSwitchCase="'dateTime'">
-                    <div class="col-md-2 col-xs-6">
-                        <h4>Posting date</h4>
-                        <h6 class="date">{{ job[chip?.field] | date: 'medium'}}</h6>
-                    </div>
-                </ng-container>
+                
                 <ng-container *ngSwitchCase="'USD'">
                     {{ job[chip?.field] | currency: 'USD'}}
                 </ng-container>
@@ -53,12 +38,7 @@
                 <ng-container *ngSwitchCase="'EUR'">
                     {{ job[chip?.field] | currency: 'EUR'}}
                 </ng-container>
-                <ng-container *ngSwitchDefault>
-                    <div class="col-md-2 col-xs-6">
-                        <h4>Location</h4>
-                        <h6 class="location"> {{ job[chip?.field] || job[chip] }}</h6>
-                    </div>
-                </ng-container>
+
             </ng-container>
             <div class="col-md-2">
                 <a class="button-1" [href]="'jobs/' + job.id" [routerLink]="'jobs/' + job.id">Details</a>

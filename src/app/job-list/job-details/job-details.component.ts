@@ -113,6 +113,25 @@ export class JobDetailsComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  public jobPayRateDisplay = '';
+
+  public jobPayRate(payrate) {
+    this.jobPayRateDisplay = payrate;
+    let start_rate = 0;
+    let end_rate = 0;
+
+    if (payrate < 50) {
+      start_rate = payrate * 0.2 + payrate
+      end_rate = payrate * 0.1 + payrate
+    } else {
+      start_rate = payrate * 0.1 + payrate
+      end_rate = payrate * 0.05 + payrate
+    }
+    this.jobPayRateDisplay = start_rate + '-' + end_rate
+
+    return this.jobPayRateDisplay
+  }
+
   private setJob(): void {
     let res: any = this.route.snapshot.data.message;
     if (res.data && res.data.length > 0) {
