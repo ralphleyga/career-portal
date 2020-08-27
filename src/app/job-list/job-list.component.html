@@ -23,7 +23,7 @@
             </div>
             <ng-container *ngFor="let chip of jobInfoChips" [ngSwitch]="chip.type || 'string'">
                 <ng-container *ngSwitchCase="'string'">
-                    <div class="col-md-2 col-xs-6">
+  c                  <div class="col-md-2 col-xs-6">
                         <h4 *ngIf="job.address.city && job.address.state">Location</h4>
                         <h6 *ngIf="job.address.city && job.address.state" class="location">{{ job.address.city }}, {{ job.address.state }}</h6>
                     </div>
