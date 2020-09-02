@@ -39,7 +39,7 @@ export class JobListComponent implements OnChanges {
   public jobPayRateDisplay = '';
 
   private roundOfPayRate(payrate) {
-    return (Math.round(payrate * 4) / 4).toFixed(2);
+    return (Math.round(payrate * 4) / 4).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   public jobPayRate(payrate) {
@@ -51,8 +51,8 @@ export class JobListComponent implements OnChanges {
       low_rate = payrate * 0.9;
       high_rate = payrate * 1.2
     } else {
-      low_rate = payrate * 0.95
-      high_rate = payrate * 1.1
+      low_rate = payrate * 0.8
+      high_rate = payrate * 1.13
     }
 
     this.jobPayRateDisplay = this.roundOfPayRate(low_rate) + '-' + this.roundOfPayRate(high_rate)
