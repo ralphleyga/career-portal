@@ -60,6 +60,65 @@ export class JobListComponent implements OnChanges {
     return this.jobPayRateDisplay
   }
 
+  public jobIcon(jobCategory) {
+    let nurses = ['RN', 'CNA', 'CDI', 'CMA', 'LPN', 'MA'];
+    let providers = [
+          'LABORATORY PROCESSING ASSISTANT',
+          'LABORATORY DIRECTOR',
+          'LABORATORY MANAGER',
+          'OCCUPATIONAL THERAPIST',
+          'PERFUSIONIST',
+          'PHYSICAL THERAPIST',
+          'PHYSICIAN',
+          'SPEECH THERAPIST',
+      ];
+    let respiratory = ['CRT', 'RRT'];
+    let behavioral = ['LCSW', 'LMSW'];
+    let technicians = [
+            'CST',
+            'RVT',
+            'LABORATORY TECHNICIAN',
+            'LABORATORY TECHNOLOGIST',
+            'MEDICAL TECHNICIAN',
+            'PHLEBOTOMIST',
+            'TECHNICIAN',
+            'ENDOSCOPY TECHNICIAN',
+            'STERILE PROCESSING TECHNICIAN',
+
+            // TO VERIFY
+            'INTERIM DIRECTOR'
+          ];
+    let category = jobCategory.toUpperCase().trim();
+  
+    let nurseResult = this.checkIcon(category, nurses);
+    if (nurseResult) { return 'nurses' };
+    
+    let providersResult = this.checkIcon(category, providers);
+    if (providersResult) { return 'providers' };
+    
+    let behavioralResult = this.checkIcon(category, behavioral);
+    if (behavioralResult) { return 'behavioral' };
+
+    let techniciansResult = this.checkIcon(category, technicians);
+    if (techniciansResult) { return 'technicians' };
+    
+    let respiratoryResult = this.checkIcon(category, respiratory);
+    if (respiratoryResult) { return 'respiratory' };
+    
+    console.log(category);
+    return 'unlisted';
+  }
+
+  public checkIcon(category, categoryList) {
+    let nurseResults = categoryList.filter( (category_data) => category_data === category );
+
+    if (nurseResults.length) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public getData(loadMore: boolean = false): void {
     this.start = loadMore ? (this.start + 30) : 0;
     this.titleService.setTitle(`${SettingsService.settings.companyName} - Careers`);

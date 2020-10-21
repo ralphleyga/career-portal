@@ -1566,12 +1566,57 @@ footer p.text-center {
     background-position: left 5px;
     padding-left: 87px;
 }
-#job-listings .listing-img-5 {
-    background-image: url("../img/listing-icon-2.png");
+
+/* JOB LISTING ICONS */
+#job-listings .listing-img-providers {
+    background-image: url("../img/tab-icon-1.png");
+    background-repeat: no-repeat;
+    background-position: left 5px;
+	padding-left: 87px;
+	min-height: 75pt !important;
+}
+
+#job-listings .listing-img-nurses {
+    background-image: url("../img/tab-icon-2.png");
+    background-repeat: no-repeat;
+    background-position: left 5px;
+	padding-left: 87px;
+	min-height: 75pt !important;
+}
+
+#job-listings .listing-img-respiratory {
+    background-image: url("../img/tab-icon-3.png");
+    background-repeat: no-repeat;
+    background-position: left 5px;
+	padding-left: 87px;
+	min-height: 75pt !important;
+}
+
+#job-listings .listing-img-behavioral {
+    background-image: url("../img/tab-icon-4.png");
     background-repeat: no-repeat;
     background-position: left 5px;
     padding-left: 87px;
 }
+
+#job-listings .listing-img-techinicians {
+    background-image: url("../img/tab-icon-5.png");
+    background-repeat: no-repeat;
+    background-position: left 5px;
+	padding-left: 87px;
+	min-height: 75pt !important;
+}
+
+/* JOB LISTING ICONS */
+#job-listings .listing-img-unlisted {
+    background-image: url("../img/tab-icon-1.png");
+    background-repeat: no-repeat;
+    background-position: left 5px;
+	padding-left: 87px;
+	min-height: 75pt !important;
+}
+
+
 #job-listings .left-side-bar {
 	background-color: #FFF;
 	-webkit-box-shadow: 0px 7px 34px 9px rgba(44,12,74,0.09);

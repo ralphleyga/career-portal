@@ -13,8 +13,8 @@
     <div class="box">
         <div class="row">
             <div class="col-md-6">
-                <div class="listing-img-5">
-                    <h3>{{ job.title }}</h3>
+                <div class="listing-img-{{ jobIcon(job.publishedCategory.name) }}">
+                    <h3>{{ job.title }} </h3>
                 </div>
             </div>
             <div class="col-md-2 col-xs-6">
@@ -23,7 +23,7 @@
             </div>
             <ng-container *ngFor="let chip of jobInfoChips" [ngSwitch]="chip.type || 'string'">
                 <ng-container *ngSwitchCase="'string'">
-  c                  <div class="col-md-2 col-xs-6">
+                    <div class="col-md-2 col-xs-6">
                         <h4 *ngIf="job.address.city && job.address.state">Location</h4>
                         <h6 *ngIf="job.address.city && job.address.state" class="location">{{ job.address.city }}, {{ job.address.state }}</h6>
                     </div>
