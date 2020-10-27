@@ -46,15 +46,8 @@ export class JobListComponent implements OnChanges {
     this.jobPayRateDisplay = payrate;
     let low_rate = 0;
     let high_rate = 0;
-
-    if (payrate < 50) {
-      low_rate = payrate * 0.8;
-      high_rate = payrate * 1.1
-    } else {
-      low_rate = payrate * 0.8
-      high_rate = payrate * 1.13
-    }
-
+    low_rate = payrate * 0.8;
+    high_rate = payrate * 1.06;
     this.jobPayRateDisplay = this.roundOfPayRate(low_rate) + '-' + this.roundOfPayRate(high_rate)
 
     return this.jobPayRateDisplay
